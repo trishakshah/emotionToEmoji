@@ -24,7 +24,26 @@ function getResult(error,results){
     else {console.log(results)
     prediction_1=results[0].label;
     prediction_2=results[1].label;
-    speak();}
+    speak();
+    if (prediction_1=="happy"){
+        document.getElementById("mood1").innerHTML="&#128522;";
+    }
+    if (prediction_1=="sad"){
+        document.getElementById("mood1").innerHTML="&#128532;";
+    }
+    if (prediction_1=="angry"){
+        document.getElementById("mood1").innerHTML="&#128545;";
+    }
+    if (prediction_2=="happy"){
+        document.getElementById("mood2").innerHTML="&#128522;";
+    }
+    if (prediction_2=="sad"){
+        document.getElementById("mood2").innerHTML="&#128532;";
+    }
+    if (prediction_2=="angry"){
+        document.getElementById("mood2").innerHTML="&#128545;";
+    }
+}
 }
 
 function speak(){ 
